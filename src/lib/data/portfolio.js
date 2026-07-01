@@ -1,0 +1,126 @@
+// PLACEHOLDER DATA — replace with real client projects before launch
+
+export const portfolioProjects = [
+  {
+    image: "/project.jpg",
+    imageClass: "image",
+    title: "City Online Limited",
+    category: "Web Development , UX & UI Design",
+    aos: "fade-right",
+  },
+  {
+    image: "/project2.jpg",
+    imageClass: "image2",
+    title: "Jack Creative Studio",
+    category: "Web Development",
+    aos: "fade-left",
+  },
+  {
+    image: "/project3.jpg",
+    imageClass: "image",
+    title: "Think Foodie",
+    category: "Web Development",
+    aos: "fade-right",
+  },
+  {
+    image: "/project4.jpg",
+    imageClass: "image2",
+    title: "Imperial Jute",
+    category: "Business Website Development",
+    aos: "fade-left",
+  },
+  {
+    image: "/project5.jpg",
+    imageClass: "image",
+    title: "Clean & Green Carpet Cleaning",
+    category: "Web Development , UX & UI Design",
+    aos: "fade-right",
+  },
+  {
+    image: "/project6.jpg",
+    imageClass: "image2",
+    title: "Photo Fix Zone",
+    category: "Business Website Development",
+    aos: "fade-left",
+  },
+];
+
+export const portfolioPageProjects = [
+  {
+    image: "/project.jpg",
+    imageClass: "image",
+    title: "City Online Limited",
+    category: "Web Development , UX & UI Design",
+    aos: "fade-right",
+  },
+  {
+    image: "/project2.jpg",
+    imageClass: "image2",
+    title: "Jack Creative Studio",
+    category: "Web Development",
+    aos: "fade-left",
+  },
+  {
+    image: "/project3.jpg",
+    imageClass: "image",
+    title: "Think Foodie",
+    category: "Web Development",
+    aos: "fade-right",
+  },
+  {
+    image: "/project4.jpg",
+    imageClass: "image2",
+    title: "Imperial Jute",
+    category: "Business Website Development",
+    aos: "fade-left",
+  },
+  {
+    image: "/project5.jpg",
+    imageClass: "image",
+    title: "Clean & Green Carpet Cleaning",
+    category: "Web Development , UX & UI Design",
+    aos: "fade-right",
+  },
+  {
+    image: "/project6.jpg",
+    imageClass: "image2",
+    title: "Photo Fix Zone",
+    category: "Business Website Development",
+    aos: "fade-left",
+  },
+  {
+    image: "/project6.jpg",
+    imageClass: "image",
+    title: "Photo Fix Zone",
+    category: "Business Website Development",
+    aos: "fade-right",
+  },
+  {
+    image: "/project6.jpg",
+    imageClass: "image2",
+    title: "Photo Fix Zone",
+    category: "Business Website Development",
+    aos: "fade-left",
+  },
+  {
+    image: "/project6.jpg",
+    imageClass: "image",
+    title: "Photo Fix Zone",
+    category: "Business Website Development",
+    aos: "fade-right",
+  },
+  {
+    image: "/project6.jpg",
+    imageClass: "image2",
+    title: "Photo Fix Zone",
+    category: "Business Website Development",
+    aos: "fade-left",
+  },
+  {
+    image: "/project6.jpg",
+    imageClass: "image",
+    title: "Photo Fix Zone",
+    category: "Business Website Development",
+    aos: "fade-right",
+  },
+];

@@ -1,0 +1,9 @@
+.sectionTop {
+  backdrop-filter: blur(8px) saturate(280%);
+  padding-top: 100px;
+}
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

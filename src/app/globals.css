@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  /* background elevation tiers */
+  --bg-base: #07090f;
+  --bg-surface-1: #0d1117;
+  --bg-surface-2: #131826;
+  --bg-surface-3: #1a2133;
+  --bg-surface-4: #222b42;
+
+  /* borders */
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-default: rgba(255, 255, 255, 0.14);
+  --border-strong: rgba(255, 255, 255, 0.24);
+
+  /* text */
+  --text-primary: #f4f6fb;
+  --text-secondary: #a8b0c3;
+  --text-muted: #6b7388;
+
+  /* primary accent — logo teal-blue */
+  --accent-blue-400: #55c1e8;
+  --accent-blue-500: #1ba0d5;
+  --accent-blue-600: #1480ae;
+  --accent-blue-glow: rgba(27, 160, 213, 0.35);
+  --gradient-primary: linear-gradient(135deg, #e8206a 0%, #c21558 100%);
+
+  /* secondary accent — logo rose/pink */
+  --accent-amber-400: #f0508a;
+  --accent-amber-500: #e8206a;
+  --accent-amber-600: #c21558;
+
+  /* semantic */
+  --semantic-error: #ef4444;
+  --semantic-success: #22c55e;
+
+  /* radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-pill: 999px;
+  --radius: var(--radius-md);
+
+  /* spacing */
+  --space-section: clamp(4rem, 8vw, 8rem);
+
+  /* shadows */
+  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.35);
+  --shadow-card-hover: 0 12px 40px rgba(27, 160, 213, 0.18);
+  --shadow-glow-blue: 0 0 32px rgba(27, 160, 213, 0.35);
+  --shadow-glow-amber: 0 0 32px rgba(232, 32, 106, 0.3);
+
+  /* deprecated aliases — remove once `grep -r "brand-" src/` is clean */
+  --brand-primary: var(--accent-blue-500);
+  --brand-secondary: var(--accent-blue-600);
+  --brand-accent: var(--accent-amber-500);
+  --brand-rose: var(--accent-amber-500);
+
+  --background: var(--bg-base);
+  --foreground: var(--text-primary);
+}
+
+* {
+  border-color: var(--border-subtle);
+}
+
+body {
+  background-color: var(--bg-base);
+  color: var(--text-primary);
+}
+
+/* subtle global noise overlay to prevent banding on the near-black base */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.025;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+}
+
+::selection {
+  background-color: var(--accent-blue-500);
+  color: #fff;
+}
+
+/* Mantine Calendar overrides — remove red weekend color */
+.mantine-Calendar-day[data-weekend] {
+  color: var(--text-secondary) !important;
+}
+.mantine-Calendar-day[data-selected][data-weekend] {
+  color: #fff !important;
+}
+
+.porto,
+.pricing {
+  margin-top: -80px;
+  width: 100%;
+  height: 200%;
+  background: url("/bg.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}

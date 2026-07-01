@@ -1,0 +1,44 @@
+.container{
+    position: relative;
+    height: 100px;
+}
+.container2{
+    position: relative;
+    height: 100px;
+}
+.slide{
+    position: absolute;
+    left: 0;
+    height: 100px;
+    animation: slide-left-right 300s linear infinite;
+}
+.slide2{
+    position: absolute;
+    left: 0;
+    height: 100px;
+    animation: slide-right-left 300s linear infinite;
+}
+
+@keyframes slide-left-right {
+0% {
+        transform: translateX(-55%);
+        /* Move from the left */
+    }
+
+
+    100% {
+        transform: translateX(0%);
+        /* Move out to the right and loop */
+    }
+}
+@keyframes slide-right-left {
+    0% {
+        transform: translateX(0%);
+        /* Start at the original position */
+    }
+
+    100% {
+        transform: translateX(-55%);
+        /* Move off-screen to the left */
+    }
+}

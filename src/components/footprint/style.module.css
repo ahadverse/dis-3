@@ -1,0 +1,18 @@
+.card {
+  align-items: flex-start;
+  background: var(
+    --Cards-BG-Dark-4,
+    linear-gradient(104deg, #fff 2.19%, #cee7f7 32.57%)
+  );
+  padding: 1rem;
+  border-top-right-radius: 24px;
+  border-bottom-right-radius: 24px;
+  border-bottom-left-radius: 24px;
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  .card {
+    padding: 1.5rem;
+  }
+}

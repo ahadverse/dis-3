@@ -1,0 +1,47 @@
+{
+  "name": "dis",
+  "version": "0.1.0",
+  "private": true,
+  "engine": {
+    "node": "24x"
+  },
+  "scripts": {
+    "dev": "next dev --turbopack -p 3000",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.971.0",
+    "@mantine/core": "^7.15.1",
+    "@mantine/dates": "^7.15.1",
+    "@mantine/hooks": "^7.15.1",
+    "@radix-ui/react-accordion": "^1.2.2",
+    "@tailwindcss/typography": "^0.5.20",
+    "@tinymce/tinymce-react": "^6.3.0",
+    "bcryptjs": "^2.4.3",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "dayjs": "^1.11.13",
+    "framer-motion": "^12.42.1",
+    "lucide-react": "^0.468.0",
+    "mongoose": "^8.0.0",
+    "next": "^16.1.6",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-icons": "^5.3.0",
+    "react-qr-code": "^2.0.15",
+    "react-scroll-to-top": "^3.1.0",
+    "tailwind-merge": "^2.5.5",
+    "tailwindcss-animate": "^1.0.7",
+    "tinymce": "^8.3.2"
+  },
+  "devDependencies": {
+    "@types/node": "25.0.9",
+    "@types/react": "18.3.27",
+    "eslint": "^8",
+    "eslint-config-next": "15.0.3",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1"
+  }
+}

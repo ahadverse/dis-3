@@ -1,0 +1,63 @@
+.main {
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+@media (min-width: 768px) {
+  .main {
+    gap: 0;
+    justify-content: space-between;
+  }
+}
+
+.container1 {
+  width: 100%;
+  height: auto;
+  border-top-right-radius: 24px;
+  border-bottom-right-radius: 24px;
+  border-bottom-left-radius: 24px;
+  background: var(
+    --Cards-BG-Dark-4,
+    linear-gradient(104deg, #fff 2.19%, #ffbcfd 32.57%)
+  );
+  background-position: center;
+  background-size: cover;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container2 {
+  width: 100%;
+  height: auto;
+  border-radius: 24px 24px 0 24px;
+  padding: 1.5rem;
+  background: #e0f2fe;
+  justify-content: space-between;
+  background-image: url("/map-2.png");
+  background-position: bottom center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .container1 {
+    flex: 0 0 auto;
+    width: 42%;
+    height: 450px;
+  }
+  .container2 {
+    flex: 0 0 auto;
+    width: 58%;
+    height: 450px;
+  }
+}
