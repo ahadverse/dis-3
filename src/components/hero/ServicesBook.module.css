@@ -1,0 +1,194 @@
+.scene {
+  perspective: 1100px;
+  width: min(100%, 440px);
+  aspect-ratio: 44 / 32;
+  position: relative;
+  animation: bookFloat 4s ease-in-out infinite;
+  filter: drop-shadow(0 30px 60px var(--accent-blue-glow))
+    drop-shadow(0 10px 24px rgba(0, 0, 0, 0.45));
+}
+
+.book {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+  /* viewed from above-front like a book lying open on a desk */
+  transform: rotateX(26deg) rotateZ(-2deg);
+}
+
+.pageLeft,
+.pageRight,
+.flipper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+}
+
+.pageLeft {
+  left: 0;
+  border-radius: 12px 4px 4px 12px;
+  background: #000;
+  border: 1px solid var(--border-default);
+  border-right: none;
+  transform-origin: right center;
+  transform: rotateY(14deg);
+}
+
+.pageRight {
+  right: 0;
+  border-radius: 4px 12px 12px 4px;
+  background: #000;
+  border: 1px solid var(--border-default);
+  border-left: none;
+  transform-origin: left center;
+  transform: rotateY(-14deg);
+}
+
+/* page depth: soft sheen along the spine + vignette at the outer corner */
+.pageLeft::before,
+.faceBack::before,
+.pageRight::before,
+.faceFront::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.pageLeft::before,
+.faceBack::before {
+  background:
+    linear-gradient(to left, rgba(255, 255, 255, 0.07), transparent 24%),
+    radial-gradient(120% 90% at 0% 100%, rgba(0, 0, 0, 0.35), transparent 55%);
+}
+
+.pageRight::before,
+.faceFront::before {
+  background:
+    linear-gradient(to right, rgba(255, 255, 255, 0.07), transparent 24%),
+    radial-gradient(120% 90% at 100% 100%, rgba(0, 0, 0, 0.35), transparent 55%);
+}
+
+:global(.light) .pageLeft::before,
+:global(.light) .faceBack::before,
+:global(.light) .pageRight::before,
+:global(.light) .faceFront::before {
+  opacity: 0.25;
+}
+
+/* fore-edge: the block of stacked pages under the open spread */
+.pageLeft::after,
+.pageRight::after {
+  content: "";
+  position: absolute;
+  bottom: -11px;
+  height: 11px;
+  left: 4px;
+  right: 4px;
+  border-radius: 0 0 6px 6px;
+  background: repeating-linear-gradient(
+    to bottom,
+    var(--bg-surface-3) 0 1.5px,
+    var(--border-strong) 1.5px 2.5px
+  );
+  opacity: 0.9;
+  transform: rotateX(-40deg);
+  transform-origin: top center;
+}
+
+.spine {
+  position: absolute;
+  left: 50%;
+  top: 1%;
+  bottom: 1%;
+  width: 3px;
+  transform: translateX(-50%);
+  background: linear-gradient(to bottom, transparent, var(--accent-blue-400), transparent);
+  opacity: 0.9;
+  z-index: 3;
+}
+
+.flipper {
+  right: 0;
+  transform-style: preserve-3d;
+  transform-origin: left center;
+  /* rest state matches .pageRight; translateZ lifts it off the static page */
+  transform: rotateY(-14deg) translateZ(1px);
+  z-index: 2;
+}
+
+.flipping {
+  animation: bookFlip 0.9s cubic-bezier(0.4, 0.1, 0.2, 1) forwards;
+}
+
+.faceFront,
+.faceBack {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 4px 12px 12px 4px;
+  border: 1px solid var(--border-default);
+  background: #000;
+}
+
+.faceBack {
+  transform: rotateY(180deg);
+  border-radius: 12px 4px 4px 12px;
+  background: #000;
+}
+
+/* light mode: pages read as paper, brightening toward the spine */
+:global(.light) .pageLeft,
+:global(.light) .faceBack {
+  background: linear-gradient(to left, var(--bg-surface-3) 0%, var(--bg-surface-2) 45%, var(--bg-surface-1) 100%);
+}
+
+:global(.light) .pageRight,
+:global(.light) .faceFront {
+  background: linear-gradient(to right, var(--bg-surface-3) 0%, var(--bg-surface-2) 45%, var(--bg-surface-1) 100%);
+}
+
+.decorLines {
+  width: 60%;
+  height: 42px;
+  background: repeating-linear-gradient(
+    to bottom,
+    var(--border-strong) 0,
+    var(--border-strong) 1px,
+    transparent 1px,
+    transparent 9px
+  );
+  opacity: 0.8;
+}
+
+@keyframes bookFlip {
+  0% {
+    transform: rotateY(-14deg) translateZ(1px);
+  }
+  100% {
+    /* mirrors .pageLeft's 14° so the page lands flush on the left side */
+    transform: rotateY(-166deg) translateZ(1px);
+  }
+}
+
+@keyframes bookFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scene {
+    animation: none;
+  }
+  .flipping {
+    animation: none;
+  }
+}

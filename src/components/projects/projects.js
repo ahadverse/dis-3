@@ -23,7 +23,7 @@ const Projects = () => {
       <StaggerGrid className='grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-10 w-full max-w-[1070px] m-auto mt-12'>
         {portfolioProjects.map((project, index) => (
           <StaggerItem
-            className='w-full bg-black'
+            className='w-full'
             key={`${project.title}-${index}`}
           >
             <img className={classes[project.imageClass]} src={project.image} />

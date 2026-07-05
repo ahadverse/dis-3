@@ -8,7 +8,7 @@ const Expertise = () => {
       <div className='max-w-[1200px] w-full mx-auto flex flex-col md:flex-row gap-4 md:gap-0 items-stretch md:justify-between'>
         <Reveal
           direction='right'
-          className='w-full md:flex-[0_0_58%] h-auto md:h-[545px] rounded-tr-3xl rounded-br-3xl rounded-bl-3xl bg-black border border-border p-4 flex flex-col justify-center'
+          className='w-full md:flex-[0_0_58%] h-auto md:h-[545px] rounded-tr-3xl rounded-br-3xl rounded-bl-3xl bg-bg-surface1 border border-border p-4 flex flex-col justify-center'
         >
           <img src='/users1.png' className='w-24 md:w-32' />
           <p className='text-3xl md:text-4xl mt-6 md:mt-28 font-bold text-text-primary'>

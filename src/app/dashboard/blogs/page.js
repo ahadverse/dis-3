@@ -145,15 +145,15 @@ export default function BlogsPage() {
         </Card>
       ) : (
         <Card hover={false} className="overflow-hidden">
-          <div className="overflow-x-auto">
+          <div className="max-h-[70vh] overflow-auto">
             <table className="w-full">
-              <thead className="bg-bg-surface3 border-b border-border-subtle">
+              <thead className="sticky top-0 z-10 bg-bg-surface3 border-b border-border-subtle">
                 <tr>
                   <th className="px-6 py-4 text-left text-sm font-semibold text-text-primary">
                     Thumbnail
                   </th>
                   <th className="px-6 py-4 text-left text-sm font-semibold text-text-primary">
-                    Title & Details
+                    Title
                   </th>
                   <th className="px-6 py-4 text-left text-sm font-semibold text-text-primary">
                     Status
@@ -186,22 +186,9 @@ export default function BlogsPage() {
                       )}
                     </td>
                     <td className="px-6 py-4">
-                      <div className="space-y-1">
-                        <p className="text-sm font-semibold text-text-primary">
-                          {blog.title}
-                        </p>
-                        <p className="text-xs text-text-muted line-clamp-2">
-                          {blog.description
-                            .replace(/<[^>]*>/g, "")
-                            .substring(0, 100)}
-                          ...
-                        </p>
-                        {blog.metaKey && (
-                          <p className="text-xs text-accent-blue-400">
-                            Keywords: {blog.metaKey.substring(0, 50)}...
-                          </p>
-                        )}
-                      </div>
+                      <p className="text-sm font-semibold text-text-primary">
+                        {blog.title}
+                      </p>
                     </td>
                     <td className="px-6 py-4 text-sm">
                       <Badge

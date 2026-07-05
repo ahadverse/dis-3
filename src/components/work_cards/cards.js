@@ -11,6 +11,7 @@ const CARDS = [
     iconAlt: "startup icon",
     title: "Startup Website",
     desc: "Provides emerging businesses with a customized, scalable, and secure website designed to reflect their brand and support your growth.",
+    href: "/services/website-design-and-development",
   },
   {
     label: "Development & Maintenance",
@@ -18,6 +19,7 @@ const CARDS = [
     iconAlt: "business icon",
     title: "Business Website",
     desc: "Designed for large businesses to enhance their online presence, ensuring their website is optimized for user experience, search engine visibility and mobile compatibility.",
+    href: "/services/website-design-and-development",
   },
   {
     label: "Development & Maintenance",
@@ -25,6 +27,7 @@ const CARDS = [
     iconAlt: "ecommerce icon",
     title: "E-Commerce Website",
     desc: "Delivers a seamless, secure, and scalable experience, equipped with advanced features like inventory management, integrated payment solutions, and user-friendly navigation.",
+    href: "/services/website-design-and-development",
   },
 ];
 
@@ -50,7 +53,7 @@ const Cards = () => {
                 {card.desc}
               </p>
             </div>
-            <Button pill size='lg' className='mt-auto w-full'>
+            <Button pill size='lg' className='mt-auto w-full' href={card.href}>
               Learn More
             </Button>
           </Card>

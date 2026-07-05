@@ -4,7 +4,7 @@ import Container from "@/components/ui/Container";
 
 const Footer = () => {
   return (
-    <footer className='relative isolate mt-section overflow-hidden border-t border-border-subtle bg-black py-16 text-text-secondary'>
+    <footer className='relative isolate mt-section overflow-hidden border-t border-border-subtle bg-bg-surface1 py-16 text-text-secondary'>
       <div className='pointer-events-none absolute -top-24 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-accent-blue-500/10 blur-[120px]' />
 
       <Container className='grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5'>

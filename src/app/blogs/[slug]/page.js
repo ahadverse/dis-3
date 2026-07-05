@@ -98,7 +98,7 @@ export default async function BlogDetailPage({ params }) {
               Overview
             </h2>
             <div
-              className='prose prose-invert max-w-none prose-headings:font-display prose-a:text-accent-blue-400 prose-strong:text-text-primary'
+              className='prose dark:prose-invert max-w-none prose-headings:font-display prose-a:text-accent-blue-400 prose-strong:text-text-primary'
               dangerouslySetInnerHTML={{ __html: blog.description }}
             />
           </section>
@@ -108,9 +108,10 @@ export default async function BlogDetailPage({ params }) {
               <h2 className='mb-4 font-display text-2xl font-bold text-text-primary'>
                 Details
               </h2>
-              <div className='whitespace-pre-wrap leading-relaxed text-text-secondary'>
-                {blog.content}
-              </div>
+              <div
+                className='prose dark:prose-invert max-w-none prose-headings:font-display prose-a:text-accent-blue-400 prose-strong:text-text-primary'
+                dangerouslySetInnerHTML={{ __html: blog.content }}
+              />
             </section>
           )}
 

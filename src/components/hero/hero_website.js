@@ -22,7 +22,7 @@ const Hero = () => {
               Development Services
             </h1>
             <p className="mt-6 text-base leading-relaxed text-text-secondary sm:text-lg md:text-xl">
-              Make the right impact with WebKooker's professional web design
+              Make the right impact with DIS's professional web design
               services that target the core elements of business
               organizations. We create websites that make their mark in first
               impressions through vibrant and attention grabbing designs to

@@ -57,7 +57,7 @@ const AccordianFa = () => {
       id: 8,
       title:
         "Why choose a monthly subscription model for web development instead of a one-time payment?",
-      desc: "A one-time payment requires a large upfront cost and only covers development. WebKooker’s monthly subscription model, on the other hand, spreads out your payments into smaller, more manageable amounts, ensuring your site stays up-to-date all year round.",
+      desc: "A one-time payment requires a large upfront cost and only covers development. DIS’s monthly subscription model, on the other hand, spreads out your payments into smaller, more manageable amounts, ensuring your site stays up-to-date all year round.",
     },
   ];
 

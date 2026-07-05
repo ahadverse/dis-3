@@ -76,6 +76,13 @@ body {
   color: var(--text-primary);
 }
 
+/* Reveal's left/right entrances translate full-width elements ±32px before
+   they enter the viewport; clip so they can't cause horizontal scroll */
+html,
+body {
+  overflow-x: clip;
+}
+
 /* subtle global noise overlay to prevent banding on the near-black base */
 body::before {
   content: "";
@@ -100,6 +107,43 @@ body::before {
 .mantine-Calendar-day[data-selected][data-weekend] {
   color: #fff !important;
 }
+
+/* ── Light mode overrides ─────────────────────────────────────── */
+.light {
+  --bg-base: #f8fafc;
+  --bg-surface-1: #ffffff;
+  --bg-surface-2: #f1f5f9;
+  --bg-surface-3: #e4eaf3;
+  --bg-surface-4: #d0daea;
+
+  --border-subtle: rgba(15, 23, 42, 0.08);
+  --border-default: rgba(15, 23, 42, 0.14);
+  --border-strong: rgba(15, 23, 42, 0.24);
+
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #94a3b8;
+
+  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.07);
+  --shadow-card-hover: 0 12px 40px rgba(27, 160, 213, 0.12);
+  --shadow-glow-blue: 0 0 32px rgba(27, 160, 213, 0.18);
+  --shadow-glow-amber: 0 0 32px rgba(232, 32, 106, 0.18);
+
+  --background: var(--bg-base);
+  --foreground: var(--text-primary);
+}
+
+.light body {
+  background-color: var(--bg-base);
+  color: var(--text-primary);
+}
+
+/* Hide noise overlay in light mode */
+.light body::before {
+  display: none;
+}
+
+/* ───────────────────────────────────────────────────────────── */
 
 .porto,
 .pricing {

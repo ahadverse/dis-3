@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Menu, Drawer } from "@mantine/core";
 import { Menu as MenuIcon, ChevronDown } from "lucide-react";
 import Container from "@/components/ui/Container";
+import ThemeToggle from "@/components/shared/ThemeToggle";
 
 const SERVICES_LINKS = [
   {
@@ -88,20 +89,24 @@ const Header = () => {
           </ul>
         </div>
 
-        <div className='hidden md:block'>
+        <div className='hidden md:flex items-center gap-3'>
+          <ThemeToggle />
           <Link href={"/login"} className={style.login}>
             Login
           </Link>
         </div>
 
-        {/* Mobile Menu Button */}
-        <button
-          className='block p-2 text-text-primary md:hidden'
-          aria-label='Open menu'
-          onClick={() => setDrawerOpened(true)}
-        >
-          <MenuIcon size={24} />
-        </button>
+        {/* Mobile right group */}
+        <div className="flex items-center gap-2 md:hidden">
+          <ThemeToggle />
+          <button
+            className='p-2 text-text-primary'
+            aria-label='Open menu'
+            onClick={() => setDrawerOpened(true)}
+          >
+            <MenuIcon size={24} />
+          </button>
+        </div>
 
         {/* Mobile Drawer */}
         <Drawer

@@ -118,7 +118,7 @@ const Blogs = () => {
       <div className='relative overflow-hidden pt-6 pb-4'>
         <Reveal delay={0.1}>
           <Container>
-            <div className='rounded-xl border border-border bg-black p-4 shadow-card md:p-6'>
+            <div className='rounded-xl border border-border bg-bg-surface1 p-4 shadow-card md:p-6'>
               <div className='grid grid-cols-1 gap-4 md:grid-cols-3'>
                 <div>
                   <label className='mb-2 block text-sm font-medium text-text-secondary'>
@@ -199,7 +199,12 @@ const Blogs = () => {
             No blogs found. Try adjusting your search or filters.
           </div>
         ) : (
-          <StaggerGrid className='grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3'>
+          // amount must stay tiny: on mobile this grid is ~4000px tall, so a
+          // larger in-view fraction never triggers and the list stays blank
+          <StaggerGrid
+            amount={0.02}
+            className='grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3'
+          >
             {data.map((blog) => (
               <StaggerItem key={blog._id}>
                 <Blog blog={blog} />

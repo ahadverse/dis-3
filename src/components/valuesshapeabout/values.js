@@ -24,7 +24,7 @@ const Values = () => {
             <img src='/value/1.jpg' className='w-full h-64 object-cover' />
           </StaggerItem>
 
-          <StaggerItem className='w-full max-w-sm mx-auto rounded-3xl p-6 bg-black border border-border shadow-card'>
+          <StaggerItem className='w-full max-w-sm mx-auto rounded-3xl p-6 bg-bg-surface1 border border-border shadow-card'>
             <img
               src='/value1.png'
               className='rounded-3xl mx-auto w-24 h-24 object-contain'
@@ -48,7 +48,7 @@ const Values = () => {
             <img src='/value/2.jpg' className='w-full h-64 object-cover' />
           </StaggerItem>
 
-          <StaggerItem className='w-full max-w-sm mx-auto rounded-3xl p-6 bg-black border border-border shadow-card'>
+          <StaggerItem className='w-full max-w-sm mx-auto rounded-3xl p-6 bg-bg-surface1 border border-border shadow-card'>
             <img
               src='/value2.png'
               className='rounded-3xl mx-auto w-24 h-24 object-contain'
@@ -71,7 +71,7 @@ const Values = () => {
             <img src='/value/3.png' className='w-full h-64 object-cover' />
           </StaggerItem>
 
-          <StaggerItem className='w-full max-w-sm mx-auto rounded-3xl p-6 bg-black border border-border shadow-card'>
+          <StaggerItem className='w-full max-w-sm mx-auto rounded-3xl p-6 bg-bg-surface1 border border-border shadow-card'>
             <img
               src='/value3.png'
               className='rounded-3xl mx-auto w-24 h-24 object-contain'

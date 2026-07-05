@@ -13,7 +13,7 @@ const Logos = () => {
     <div className='grid grid-cols-2 gap-4 xl:grid-cols-6 sm:grid-cols-3 mt-10 items-center justify-between opacity-80'>
       <SiNextdotjs
         size={48}
-        className='text-white transition-colors mx-auto duration-200 hover:opacity-90'
+        className='text-text-primary transition-colors mx-auto duration-200 hover:opacity-90'
       />
       <SiShopify
         size={56}
@@ -21,7 +21,7 @@ const Logos = () => {
       />
       <SiWix
         size={56}
-        className='text-white transition-colors mx-auto duration-200 hover:opacity-90'
+        className='text-text-primary transition-colors mx-auto duration-200 hover:opacity-90'
       />
       <SiWordpress
         size={60}

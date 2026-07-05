@@ -43,7 +43,7 @@ const Projects = () => {
     <div className="px-4 py-20">
       <Reveal direction="up">
         <p className="text-center font-display text-display-sm font-bold capitalize text-text-primary sm:text-display-md lg:text-display-lg">
-          Websites Built and Empowered by WebKooker
+          Websites Built and Empowered by DIS
         </p>
       </Reveal>
       <Reveal direction="up" delay={0.1}>

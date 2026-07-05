@@ -4,7 +4,7 @@ import Reveal from "../motion/Reveal";
 
 const Banner1 = () => {
   return (
-    <div className='relative overflow-hidden rounded-2xl border border-border-subtle bg-black px-4 py-12 sm:px-6 md:px-10 md:py-20'>
+    <div className='relative overflow-hidden rounded-2xl border border-border-subtle bg-bg-surface1 px-4 py-12 sm:px-6 md:px-10 md:py-20'>
       <div className='pointer-events-none absolute -left-20 top-0 h-72 w-72 rounded-full bg-accent-blue-500/20 blur-[120px]' />
       <div className='pointer-events-none absolute -right-20 bottom-0 h-72 w-72 rounded-full bg-accent-blue-400/10 blur-[120px]' />
 

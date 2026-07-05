@@ -4,7 +4,7 @@ import FAQ from "../components/faq/faq";
 import Hero from "../components/hero/hero";
 import Projects from "../components/projects/projects";
 import Subcribe from "../components/subscribe/subcribe";
-import PricingSection from "../components/pricing/PricingSection";
+import Services_Overview from "../components/services_overview/services_overview";
 import Why_have_website from "../components/why_have_website/why_have_website";
 import Work_flow from "../components/work_flow/work_flow";
 import Our_Distinctive_Edge from "../components/ourdistinctiveegde/ourdistinctiveegde";
@@ -19,7 +19,7 @@ export default function Home() {
     <div className='bg-bg-base'>
       <Hero />
 
-      <PricingSection serviceKey="website-design" />
+      <Services_Overview />
 
       <Projects />
       <hr className='my-10 border-border-subtle' />

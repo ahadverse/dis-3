@@ -25,7 +25,7 @@ const About_section = () => {
         {/* TODO: Replace with verified, real business stats */}
         <Reveal
           direction='right'
-          className='w-full md:w-[42%] h-auto md:h-[450px] rounded-tr-3xl rounded-br-3xl rounded-bl-3xl bg-black border border-border bg-[url("/about2.png")] bg-center bg-cover p-6 flex flex-col justify-center'
+          className='w-full md:w-[42%] h-auto md:h-[450px] rounded-tr-3xl rounded-br-3xl rounded-bl-3xl bg-bg-surface1 border border-border bg-[url("/about2.png")] bg-center bg-cover p-6 flex flex-col justify-center'
         >
           <p className='text-2xl md:text-4xl font-extrabold text-text-primary'>
             <AnimatedCounter value={13} />
@@ -38,7 +38,7 @@ const About_section = () => {
         <Reveal
           direction='left'
           delay={0.1}
-          className='w-full md:w-[58%] h-auto md:h-[450px] rounded-bl-3xl rounded-tr-3xl rounded-br-3xl bg-black border border-border p-4 md:px-5 flex flex-col justify-center'
+          className='w-full md:w-[58%] h-auto md:h-[450px] rounded-bl-3xl rounded-tr-3xl rounded-br-3xl bg-bg-surface1 border border-border p-4 md:px-5 flex flex-col justify-center'
         >
           <h2 className='mt-6 md:mt-10 text-xl md:text-3xl lg:text-5xl font-semibold text-text-primary'>
             <AnimatedCounter value={400} suffix='+' /> successfully developed

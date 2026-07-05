@@ -28,7 +28,7 @@ const Footprint = () => {
       </div>
 
       <StaggerGrid className='grid grid-cols-1 md:grid-cols-3 gap-6 max-w-[1200px] w-full mx-auto mt-4'>
-        <StaggerItem className='rounded-xl border border-border bg-black shadow-card p-4 md:p-6'>
+        <StaggerItem className='rounded-xl border border-border bg-bg-surface1 shadow-card p-4 md:p-6'>
           <h1 className='text-xl md:text-2xl font-semibold text-text-primary'>
             TX, United States
           </h1>
@@ -45,7 +45,7 @@ const Footprint = () => {
           />
         </StaggerItem>
 
-        <StaggerItem className='rounded-xl border border-border bg-black shadow-card p-4 md:p-6'>
+        <StaggerItem className='rounded-xl border border-border bg-bg-surface1 shadow-card p-4 md:p-6'>
           <h1 className='text-xl md:text-2xl font-semibold text-text-primary'>
             NSW, Australia
           </h1>
@@ -61,7 +61,7 @@ const Footprint = () => {
           />
         </StaggerItem>
 
-        <StaggerItem className='rounded-xl border border-border bg-black shadow-card p-4 md:p-6'>
+        <StaggerItem className='rounded-xl border border-border bg-bg-surface1 shadow-card p-4 md:p-6'>
           <h1 className='text-xl md:text-2xl font-semibold text-text-primary'>
             London, UK
           </h1>

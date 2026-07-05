@@ -7,7 +7,7 @@ const Our_Distinctive_Edge2 = () => {
     <div className='flex flex-col md:flex-row justify-between gap-6 mt-2 items-center max-w-[1200px] w-full mx-auto px-4 sm:px-6'>
       <Reveal
         direction='right'
-        className='w-full md:flex-[0_0_58%] h-auto md:h-[545px] rounded-tr-3xl rounded-br-3xl rounded-bl-3xl bg-black border border-border p-4'
+        className='w-full md:flex-[0_0_58%] h-auto md:h-[545px] rounded-tr-3xl rounded-br-3xl rounded-bl-3xl bg-bg-surface1 border border-border p-4'
       >
         <h1 className='text-2xl md:text-4xl text-accent-blue-400 font-bold'>
           <AnimatedCounter value={20} suffix='+' /> Industries Served
@@ -39,7 +39,7 @@ const Our_Distinctive_Edge2 = () => {
       <Reveal
         direction='left'
         delay={0.1}
-        className='w-full md:flex-[0_0_42%] h-auto md:h-[545px] rounded-tr-3xl rounded-bl-3xl rounded-tl-3xl bg-black border border-border p-4 flex flex-col justify-center'
+        className='w-full md:flex-[0_0_42%] h-auto md:h-[545px] rounded-tr-3xl rounded-bl-3xl rounded-tl-3xl bg-bg-surface1 border border-border p-4 flex flex-col justify-center'
       >
         <p className='text-3xl md:text-5xl font-extrabold text-text-primary'>
           <AnimatedCounter value={270} suffix='+' />

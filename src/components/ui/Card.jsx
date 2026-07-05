@@ -24,7 +24,7 @@ const Card = ({
   return (
     <Wrapper
       className={cn(
-        "isolate rounded-xl border border-border bg-black shadow-card transition-shadow duration-300",
+        "isolate rounded-xl border border-border bg-bg-surface1 shadow-card transition-shadow duration-300",
         hover && "hover:border-accent-blue-500/40 hover:shadow-cardHover",
         className,
       )}
