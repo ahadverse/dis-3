@@ -7,8 +7,8 @@ import StaggerGrid, { StaggerItem } from "../motion/StaggerGrid";
 
 const Projects = () => {
   return (
-    <div className='mt-16 sm:mt-20 md:mt-28 px-4'>
-      <StaggerGrid className='grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-10 w-full max-w-[1070px] m-auto'>
+    <div className='px-4'>
+      <StaggerGrid amount='some' className='grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-10 w-full max-w-[1070px] m-auto'>
         {portfolioPageProjects.map((project, index) => (
           <StaggerItem className='w-full' key={`${project.title}-${index}`}>
             <Card className='overflow-hidden p-0'>

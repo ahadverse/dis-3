@@ -22,7 +22,7 @@ const SERVICES_LINKS = [
     label: "Social Media Marketing",
   },
   { href: "/services/lead-generation", label: "Lead Generation" },
-  { href: "/services/training", label: "Training" },
+  // { href: "/services/training", label: "Training" },
 ];
 
 const NAV_LINKS = [
@@ -40,19 +40,31 @@ const Header = () => {
     <div className='sticky top-0 z-50 border-b border-border-subtle bg-bg-base/70 backdrop-blur-xl'>
       <Container className='flex h-[75px] items-center justify-between'>
         <Link href='/'>
-          <img alt='DIS Private LTD logo' className='w-[60px]' src={"/logo.png"} />
+          <img
+            alt='DIS Private LTD logo'
+            className='w-[60px]'
+            src={"/logo.png"}
+          />
         </Link>
 
         {/* Desktop Menu */}
         <div className='hidden md:flex'>
           <ul className='flex w-[450px] items-center justify-between gap-4 font-semibold text-text-secondary'>
             <li>
-              <Link className='text-[16px] transition-colors hover:text-text-primary' href={"/about"}>
+              <Link
+                className='text-[16px] transition-colors hover:text-text-primary'
+                href={"/about"}
+              >
                 About
               </Link>
             </li>
 
-            <Menu position='bottom-start' withArrow trigger='hover' className='bg-transparent'>
+            <Menu
+              position='bottom-start'
+              withArrow
+              trigger='hover'
+              className='bg-transparent'
+            >
               <Menu.Target>
                 <li className='flex cursor-pointer items-center gap-1 text-[16px] transition-colors hover:text-text-primary'>
                   Services <ChevronDown size={14} />
@@ -70,8 +82,14 @@ const Header = () => {
                 }}
               >
                 {SERVICES_LINKS.map((service) => (
-                  <Menu.Item key={service.href} className='!bg-transparent hover:!bg-white/5'>
-                    <Link href={service.href} className='block w-[280px] py-1 text-[15px] text-text-secondary hover:text-accent-blue-400'>
+                  <Menu.Item
+                    key={service.href}
+                    className='!bg-transparent hover:!bg-white/5'
+                  >
+                    <Link
+                      href={service.href}
+                      className='block w-[280px] py-1 text-[15px] text-text-secondary hover:text-accent-blue-400'
+                    >
                       {service.label}
                     </Link>
                   </Menu.Item>
@@ -81,7 +99,10 @@ const Header = () => {
 
             {NAV_LINKS.filter((l) => l.href !== "/about").map((link) => (
               <li key={link.href}>
-                <Link className='text-[16px] transition-colors hover:text-text-primary' href={link.href}>
+                <Link
+                  className='text-[16px] transition-colors hover:text-text-primary'
+                  href={link.href}
+                >
                   {link.label}
                 </Link>
               </li>
@@ -97,7 +118,7 @@ const Header = () => {
         </div>
 
         {/* Mobile right group */}
-        <div className="flex items-center gap-2 md:hidden">
+        <div className='flex items-center gap-2 md:hidden'>
           <ThemeToggle />
           <button
             className='p-2 text-text-primary'
@@ -116,7 +137,10 @@ const Header = () => {
           padding='md'
           size='75%'
           styles={{
-            content: { backgroundColor: "var(--bg-surface-1)", color: "var(--text-primary)" },
+            content: {
+              backgroundColor: "var(--bg-surface-1)",
+              color: "var(--text-primary)",
+            },
             header: { backgroundColor: "var(--bg-surface-1)" },
             close: { color: "var(--text-secondary)" },
           }}
@@ -136,7 +160,10 @@ const Header = () => {
                 className='flex items-center justify-between rounded px-4 py-3 text-[16px] font-semibold text-accent-blue-400 hover:bg-white/5'
               >
                 Services
-                <ChevronDown size={14} className={`transition-transform duration-200 ${servicesOpen ? "rotate-180" : ""}`} />
+                <ChevronDown
+                  size={14}
+                  className={`transition-transform duration-200 ${servicesOpen ? "rotate-180" : ""}`}
+                />
               </button>
               {servicesOpen && (
                 <ul className='ml-4 flex flex-col gap-2 py-2'>

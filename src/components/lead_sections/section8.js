@@ -7,7 +7,7 @@ const Section8 = () => {
     <Section background="surface1">
       <div className="flex w-full flex-col items-center justify-between gap-6 sm:flex-row">
         <Reveal direction="right" className="w-full sm:w-6/12">
-          <img className="w-full" src="/lead8.webp" alt="Analytics" />
+          <img className="w-full" src="/analysis.png" alt="Analytics" />
         </Reveal>
         <Reveal direction="left" className="w-full sm:w-6/12">
           <h1 className="text-center font-display text-2xl font-bold text-text-primary sm:text-left sm:text-3xl">

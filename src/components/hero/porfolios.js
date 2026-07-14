@@ -45,7 +45,7 @@ const Hero = () => {
       <div className='w-full px-4 mt-8 sm:mt-12'>
         <Reveal delay={0.25}>
           <div className='flex flex-col sm:flex-row justify-center sm:justify-between gap-6 sm:gap-4 max-w-[1000px] m-auto'>
-            <div className='flex-1 min-h-[200px] sm:h-[250px] p-6 sm:p-10'>
+            <div className='flex-1 min-h-[200px] sm:min-h-[250px] p-6 sm:p-10'>
               <img
                 className='w-20 sm:w-28 m-auto'
                 src='/sb1.png'
@@ -58,7 +58,7 @@ const Hero = () => {
                 Satisfied clients
               </p>
             </div>
-            <div className='flex-1 min-h-[200px] sm:h-[250px] p-6 sm:p-10'>
+            <div className='flex-1 min-h-[200px] sm:min-h-[250px] p-6 sm:p-10'>
               <img
                 className='w-20 sm:w-28 m-auto'
                 src='/sb2.png'
@@ -71,7 +71,7 @@ const Hero = () => {
                 Average client rating on Clutch
               </p>
             </div>
-            <div className='flex-1 min-h-[200px] sm:h-[250px] p-6 sm:p-10'>
+            <div className='flex-1 min-h-[200px] sm:min-h-[250px] p-6 sm:p-10'>
               <img
                 className='w-20 sm:w-28 m-auto'
                 src='/sb3.png'

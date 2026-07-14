@@ -173,13 +173,13 @@ const Calender_Modal = () => {
             </AnimatePresence>
 
             <LayoutGroup>
-              <motion.div layout className="flex w-full gap-5">
+              <motion.div layout className="flex w-full flex-col gap-5 sm:flex-row">
 
                 {/* Calendar — centered when alone, slides left on date pick */}
                 <motion.div
                   layout
                   transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
-                  className={`flex justify-center ${selected?.length > 0 ? "w-7/12" : "w-full"}`}
+                  className={`flex justify-center ${selected?.length > 0 ? "w-full sm:w-7/12" : "w-full"}`}
                 >
                   <Calendar
                     getDayProps={(date) => ({
@@ -199,7 +199,7 @@ const Calender_Modal = () => {
                       animate={{ opacity: 1 }}
                       exit={{ opacity: 0 }}
                       transition={{ duration: 0.3, delay: 0.2 }}
-                      className="w-5/12"
+                      className="w-full sm:w-5/12"
                     >
                       <p className="mb-3 text-sm font-semibold text-text-secondary">Select a time</p>
                       <div className="flex flex-wrap gap-2">

@@ -44,7 +44,7 @@ const Hero = () => {
         {/* stat strip */}
         <div className="w-full px-4 pb-8 sm:pb-12">
           <div className="mx-auto flex max-w-[1000px] flex-col justify-center gap-6 sm:flex-row sm:justify-between sm:gap-4">
-            <Reveal delay={0} className="min-h-[200px] flex-1 rounded-xl border border-border-subtle bg-bg-surface1 p-6 sm:h-[250px] sm:p-10">
+            <Reveal delay={0} className="min-h-[200px] flex-1 rounded-xl border border-border-subtle bg-bg-surface1 p-6 sm:min-h-[250px] sm:p-10">
               <img
                 className="m-auto w-20 sm:w-28"
                 src="/sb1.png"
@@ -57,7 +57,7 @@ const Hero = () => {
                 Satisfied clients
               </p>
             </Reveal>
-            <Reveal delay={0.1} className="min-h-[200px] flex-1 rounded-xl border border-border-subtle bg-bg-surface1 p-6 sm:h-[250px] sm:p-10">
+            <Reveal delay={0.1} className="min-h-[200px] flex-1 rounded-xl border border-border-subtle bg-bg-surface1 p-6 sm:min-h-[250px] sm:p-10">
               <img
                 className="m-auto w-20 sm:w-28"
                 src="/sb2.png"
@@ -70,7 +70,7 @@ const Hero = () => {
                 Average client rating on Clutch
               </p>
             </Reveal>
-            <Reveal delay={0.2} className="min-h-[200px] flex-1 rounded-xl border border-border-subtle bg-bg-surface1 p-6 sm:h-[250px] sm:p-10">
+            <Reveal delay={0.2} className="min-h-[200px] flex-1 rounded-xl border border-border-subtle bg-bg-surface1 p-6 sm:min-h-[250px] sm:p-10">
               <img
                 className="m-auto w-20 sm:w-28"
                 src="/sb3.png"

@@ -26,7 +26,7 @@ const Section11 = () => {
           </p>
         </Reveal>
         <Reveal direction="left" className="w-full sm:w-6/12">
-          <img src="/lead11.webp" className="w-full" alt="Why Choose Us" />
+          <img src="/team.webp" className="w-full" alt="Why Choose Us" />
         </Reveal>
       </div>
     </Section>

@@ -9,7 +9,7 @@ const Section10 = () => {
         <Reveal direction="right" className="w-full sm:w-6/12">
           <img
             className="w-full"
-            src="/lead10.webp"
+            src="/internet.png"
             alt="Marketing Technology"
           />
         </Reveal>
