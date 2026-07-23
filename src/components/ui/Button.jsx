@@ -37,7 +37,7 @@ const Button = ({
   ...rest
 }) => {
   const classes = cn(
-    "group inline-flex items-center justify-center gap-3 font-semibold transition-colors duration-300 disabled:cursor-not-allowed disabled:opacity-50",
+    "group relative z-10 inline-flex items-center justify-center gap-3 font-semibold transition-colors duration-300 disabled:cursor-not-allowed disabled:opacity-50",
     VARIANT_CLASSES[variant] || VARIANT_CLASSES.primary,
     SIZE_CLASSES[size] || SIZE_CLASSES.md,
     pill ? "rounded-pill" : "rounded-lg",

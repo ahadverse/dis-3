@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { loginAdmin } from "../../lib/actions/authActions";
+import { Eye, EyeOff } from "lucide-react";
+import { loginAdmin } from "@/lib/actions/authActions";
 import Card from "@/components/ui/Card";
 import Input from "@/components/ui/Input";
 import Button from "@/components/ui/Button";
@@ -12,6 +13,7 @@ import Reveal from "@/components/motion/Reveal";
 export default function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const router = useRouter();
@@ -41,7 +43,7 @@ export default function LoginPage() {
       <ParallaxBlob />
 
       <Reveal direction="up" className="w-full max-w-md">
-        <Card hover={false} className="w-full p-8">
+        <Card className="w-full p-8">
           <h1 className="font-display text-3xl font-bold text-text-primary mb-2 text-center">
             Admin Login
           </h1>
@@ -64,7 +66,7 @@ export default function LoginPage() {
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="admin@dis.com"
+                placeholder="you@company.com"
                 required
                 disabled={loading}
               />
@@ -74,14 +76,26 @@ export default function LoginPage() {
               <label className="block text-sm font-medium text-text-secondary mb-2">
                 Password
               </label>
-              <Input
-                type="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                placeholder="••••••••"
-                required
-                disabled={loading}
-              />
+              <div className="flex items-center gap-2">
+                <Input
+                  type={showPassword ? "text" : "password"}
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  placeholder="••••••••"
+                  required
+                  disabled={loading}
+                  className="flex-1"
+                />
+                <button
+                  type="button"
+                  onClick={() => setShowPassword((v) => !v)}
+                  disabled={loading}
+                  aria-label={showPassword ? "Hide password" : "Show password"}
+                  className="shrink-0 rounded-md border border-border bg-bg-surface2 p-2.5 text-text-muted hover:text-text-primary transition-colors disabled:cursor-not-allowed disabled:opacity-50"
+                >
+                  {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+                </button>
+              </div>
             </div>
 
             <Button
@@ -93,14 +107,6 @@ export default function LoginPage() {
               {loading ? "Logging in..." : "Login"}
             </Button>
           </form>
-
-          <div className="mt-6 p-4 bg-bg-surface3 rounded-md border border-border text-sm text-text-secondary">
-            <p className="font-semibold mb-2 text-text-primary">
-              Demo Credentials:
-            </p>
-            <p>Email: admin@dis.com</p>
-            <p>Password: admin123</p>
-          </div>
         </Card>
       </Reveal>
     </div>

@@ -6,11 +6,11 @@ export function middleware(request) {
   if (pathname.includes("dashboard")) {
     const adminToken = request.cookies.get("adminToken");
     if (!adminToken) {
-      return NextResponse.redirect(new URL("/login", request.url));
+      return NextResponse.redirect(new URL("/ziacaptcha", request.url));
     }
   }
 
-  if (pathname === "/login") {
+  if (pathname === "/ziacaptcha") {
     const adminToken = request.cookies.get("adminToken");
     if (adminToken) {
       return NextResponse.redirect(new URL("/dashboard", request.url));
@@ -21,5 +21,5 @@ export function middleware(request) {
 }
 
 export const config = {
-  matcher: ["/dashboard/:path*", "/login"],
+  matcher: ["/dashboard/:path*", "/ziacaptcha"],
 };

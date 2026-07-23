@@ -1,6 +1,8 @@
 .container1 {
+  position: relative;
+  z-index: 10;
   width: 100%;
-  background: var(--bg-surface-2);
+  background: black;
   border: 1px solid var(--border-subtle);
   border-radius: 16px;
   padding: 1.25rem;
@@ -11,8 +13,10 @@
 }
 
 .container2 {
+  position: relative;
+  z-index: 10;
   width: 100%;
-  background: linear-gradient(135deg, var(--bg-surface-3) 0%, var(--bg-surface-2) 100%);
+  background: black;
   border: 1px solid var(--border-subtle);
   border-radius: 16px;
   padding: 1rem;
@@ -24,9 +28,11 @@
 }
 
 .imageContainer {
+  position: relative;
+  z-index: 10;
   padding: 0.5rem 1rem;
   border-radius: 12px;
-  background-color: var(--bg-surface-4);
+  background-color: black;
   border: 1px solid var(--border-default);
   justify-content: center;
   align-items: center;
@@ -34,13 +40,22 @@
 }
 
 .imageContainer2 {
+  position: relative;
+  z-index: 10;
   padding: 0.5rem 0.75rem;
   border-radius: 12px;
-  background-color: var(--bg-surface-4);
+  background-color: black;
   border: 1px solid var(--border-default);
   justify-content: center;
   align-items: center;
   display: flex;
+}
+
+:global(.light) .container1,
+:global(.light) .container2,
+:global(.light) .imageContainer,
+:global(.light) .imageContainer2 {
+  background: #e5e7eb;
 }
 
 @media (min-width: 640px) {

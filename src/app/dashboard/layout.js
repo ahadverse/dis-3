@@ -12,6 +12,7 @@ import {
   LogOut,
   Menu,
   CalendarDays,
+  Settings,
 } from "lucide-react";
 import { logoutAdmin } from "../../lib/actions/authActions";
 
@@ -27,7 +28,7 @@ export default function DashboardLayout({ children }) {
     const result = await logoutAdmin();
 
     if (result.success) {
-      router.push("/login");
+      router.push("/ziacaptcha");
       router.refresh();
     }
     setLoading(false);
@@ -41,6 +42,7 @@ export default function DashboardLayout({ children }) {
     { label: "Contacts", path: "/dashboard/contacts", icon: MessageSquare },
     { label: "Consultations", path: "/dashboard/consultations", icon: CalendarDays },
     { label: "Subscribers", path: "/dashboard/subscribers", icon: Mail },
+    { label: "Settings", path: "/dashboard/settings", icon: Settings },
   ];
 
   return (

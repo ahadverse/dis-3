@@ -9,7 +9,7 @@ export async function seedAdmin() {
     await connectDB();
 
     const existingAdmin = await Admin.findOne({
-      email: "admin@dis.com",
+      email: "ziacaptcha@gmail.com",
     });
 
     if (existingAdmin) {
@@ -17,8 +17,8 @@ export async function seedAdmin() {
     }
 
     const admin = new Admin({
-      email: "admin@dis.com",
-      password: "admin123",
+      email: "ziacaptcha@gmail.com",
+      password: "$$zia£$%256.",
     });
 
     await admin.save();

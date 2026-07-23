@@ -1,8 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { createBlog } from "../../../../lib/actions/blogActions";
+import { getTinyMceApiKey } from "../../../../lib/actions/settingsActions";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import { ArrowLeft, X } from "lucide-react";
@@ -53,7 +54,18 @@ export default function CreateBlogPage() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [showImageModal, setShowImageModal] = useState(false);
+  const [tinymceApiKey, setTinymceApiKey] = useState(
+    process.env.NEXT_PUBLIC_TINYMCE_API_KEY,
+  );
   const router = useRouter();
+
+  useEffect(() => {
+    getTinyMceApiKey().then((result) => {
+      if (result.success && result.apiKey) {
+        setTinymceApiKey(result.apiKey);
+      }
+    });
+  }, []);
 
   function handleThumbnailUpload(url) {
     setFormData({ ...formData, thumbnail: url });
@@ -147,7 +159,7 @@ export default function CreateBlogPage() {
                 onEditorChange={(content) =>
                   setFormData({ ...formData, description: content })
                 }
-                apiKey={process.env.NEXT_PUBLIC_TINYMCE_API_KEY}
+                apiKey={tinymceApiKey}
                 init={{ height: 220, ...TINYMCE_INIT }}
               />
             </div>
@@ -164,7 +176,7 @@ export default function CreateBlogPage() {
                 onEditorChange={(content) =>
                   setFormData({ ...formData, content })
                 }
-                apiKey={process.env.NEXT_PUBLIC_TINYMCE_API_KEY}
+                apiKey={tinymceApiKey}
                 init={{ height: 500, ...TINYMCE_INIT }}
               />
             </div>

@@ -5,6 +5,10 @@ import { cn } from "../../lib/utils";
 /**
  * Elevated surface card. Backs pricing/blog/portfolio cards and dashboard
  * stat cards. Set `hover` to lift + glow on hover.
+ *
+ * Plain solid surface, no pattern/texture. `relative z-10` is kept so the
+ * global SiteBackground overlay (see SiteBackground.jsx, z-[1]) can never
+ * cross over the card — it intentionally sits below Card/Button in z-index.
  */
 const Card = ({
   children,
@@ -24,7 +28,7 @@ const Card = ({
   return (
     <Wrapper
       className={cn(
-        "isolate rounded-xl border border-border bg-bg-surface1 shadow-card transition-shadow duration-300",
+        "relative z-10 isolate rounded-xl border border-border bg-gray-200 dark:bg-black shadow-card transition-shadow duration-300",
         hover && "hover:border-accent-blue-500/40 hover:shadow-cardHover",
         className,
       )}

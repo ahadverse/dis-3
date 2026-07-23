@@ -52,7 +52,7 @@ const Header = () => {
           <ul className='flex w-[450px] items-center justify-between gap-4 font-semibold text-text-secondary'>
             <li>
               <Link
-                className='text-[16px] transition-colors hover:text-text-primary'
+                className='nav-link-glow text-[16px] transition-colors hover:text-text-primary'
                 href={"/about"}
               >
                 About
@@ -66,7 +66,7 @@ const Header = () => {
               className='bg-transparent'
             >
               <Menu.Target>
-                <li className='flex cursor-pointer items-center gap-1 text-[16px] transition-colors hover:text-text-primary'>
+                <li className='nav-link-glow flex cursor-pointer items-center gap-1 text-[16px] transition-colors hover:text-text-primary'>
                   Services <ChevronDown size={14} />
                 </li>
               </Menu.Target>
@@ -100,7 +100,7 @@ const Header = () => {
             {NAV_LINKS.filter((l) => l.href !== "/about").map((link) => (
               <li key={link.href}>
                 <Link
-                  className='text-[16px] transition-colors hover:text-text-primary'
+                  className='nav-link-glow text-[16px] transition-colors hover:text-text-primary'
                   href={link.href}
                 >
                   {link.label}
@@ -112,9 +112,6 @@ const Header = () => {
 
         <div className='hidden md:flex items-center gap-3'>
           <ThemeToggle />
-          <Link href={"/login"} className={style.login}>
-            Login
-          </Link>
         </div>
 
         {/* Mobile right group */}
@@ -195,16 +192,6 @@ const Header = () => {
                 {link.label}
               </Link>
             ))}
-
-            <hr className='my-3 border-border-subtle' />
-
-            <Link
-              href='/login'
-              onClick={() => setDrawerOpened(false)}
-              className='rounded bg-gradient-primary px-4 py-3 text-center text-[16px] font-semibold text-white'
-            >
-              Login
-            </Link>
           </nav>
         </Drawer>
       </Container>

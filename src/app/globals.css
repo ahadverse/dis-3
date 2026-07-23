@@ -100,6 +100,19 @@ body::before {
   color: #fff;
 }
 
+/* Promote any solid surface-color box above the SiteBackground pattern
+   overlay (SiteBackground.jsx, z-[1]) so the pattern can never visibly cross
+   over cards/sections site-wide, without editing every component. Elements
+   that already manage their own position are excluded so this never fights
+   an intentional fixed/absolute/sticky layout. */
+.bg-bg-surface1:not(.fixed):not(.absolute):not(.sticky),
+.bg-bg-surface2:not(.fixed):not(.absolute):not(.sticky),
+.bg-bg-surface3:not(.fixed):not(.absolute):not(.sticky),
+.bg-bg-surface4:not(.fixed):not(.absolute):not(.sticky) {
+  position: relative;
+  z-index: 10;
+}
+
 /* Mantine Calendar overrides — remove red weekend color */
 .mantine-Calendar-day[data-weekend] {
   color: var(--text-secondary) !important;
@@ -144,6 +157,27 @@ body::before {
 }
 
 /* ───────────────────────────────────────────────────────────── */
+
+/* Subtle glowing underline for nav links — Vercel/Linear-style hover polish */
+.nav-link-glow {
+  position: relative;
+}
+.nav-link-glow::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  transform: translateX(-50%);
+  width: 0%;
+  height: 2px;
+  border-radius: var(--radius-pill);
+  background: var(--gradient-primary);
+  box-shadow: 0 0 8px var(--accent-blue-glow);
+  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.nav-link-glow:hover::after {
+  width: 100%;
+}
 
 .porto,
 .pricing {
