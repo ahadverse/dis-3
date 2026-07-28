@@ -9,8 +9,16 @@ import Values from "../../components/valuesshapeabout/values";
 import React from "react";
 
 export const metadata = {
-  title: "About DIS Private LTD",
-  description: "",
+  title: "About Us",
+  description:
+    "Learn about DIS Private Limited — the team behind affordable SEO, web development, digital marketing, and lead generation services for businesses worldwide.",
+  keywords: [
+    "about dis private limited",
+    "digital marketing agency",
+    "web development company",
+    "seo agency",
+  ],
+  alternates: { canonical: "/about" },
 };
 
 const About = () => {

@@ -1,6 +1,11 @@
 import React from "react";
 import QRCode from "react-qr-code";
 
+export const metadata = {
+  title: "Certificate",
+  robots: { index: false, follow: false },
+};
+
 const Data = () => {
   return (
     <div className="my-52 w-[900px] m-auto">

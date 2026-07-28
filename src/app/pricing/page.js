@@ -2,6 +2,19 @@ import PricingSection from "../../components/pricing/PricingSection";
 import Hero from "../../components/hero/pricing";
 import React from "react";
 
+export const metadata = {
+  title: "Pricing",
+  description:
+    "Transparent pricing for website design, digital marketing, SEO, social media marketing, and lead generation packages from DIS Private Limited.",
+  keywords: [
+    "monthly seo service packages",
+    "web design pricing",
+    "digital marketing pricing",
+    "affordable seo services",
+  ],
+  alternates: { canonical: "/pricing" },
+};
+
 const Pricing = () => {
   return (
     <div className='bg-bg-base'>

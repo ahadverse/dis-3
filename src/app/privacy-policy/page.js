@@ -2,9 +2,11 @@ import React from "react";
 import Container from "../../components/ui/Container";
 
 export const metadata = {
-  title: "Privacy Policy | DIS Private LTD",
+  title: "Privacy Policy",
   description:
-    "Learn how DIS Private LTD collects, uses, and protects your personal data when you use our website design, maintenance, SEO, and marketing services.",
+    "Learn how DIS Private Limited collects, uses, and protects your personal data when you use our website design, maintenance, SEO, and marketing services.",
+  alternates: { canonical: "/privacy-policy" },
+  robots: { index: true, follow: true },
 };
 
 const Section = ({ title, children }) => (
