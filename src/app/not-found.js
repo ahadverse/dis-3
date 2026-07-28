@@ -1,6 +1,11 @@
 import Link from "next/link";
 import Container from "@/components/ui/Container";
 
+export const metadata = {
+  title: "Page Not Found",
+  robots: { index: false, follow: true },
+};
+
 export default function NotFound() {
   return (
     <div className="flex min-h-[70vh] items-center bg-bg-base">

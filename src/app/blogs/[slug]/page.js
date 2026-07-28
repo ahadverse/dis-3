@@ -2,6 +2,8 @@ import { getBlogBySlug } from "../../../lib/actions/blogActions";
 import Link from "next/link";
 import Button from "../../../components/ui/Button";
 import { ArrowLeft } from "lucide-react";
+import BlogPostingJsonLd from "@/components/seo/BlogPostingJsonLd";
+import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd";
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
@@ -14,11 +16,22 @@ export async function generateMetadata({ params }) {
   }
 
   const blog = result.blog;
+  const url = `/blogs/${slug}`;
   return {
     title: blog.title,
     description: blog.metaDesc || blog.description,
     keywords: blog.metaKey,
+    alternates: { canonical: url },
     openGraph: {
+      type: "article",
+      title: blog.title,
+      description: blog.metaDesc || blog.description,
+      url,
+      images: blog.thumbnail ? [blog.thumbnail] : [],
+      publishedTime: blog.createdAt,
+      modifiedTime: blog.updatedAt || blog.createdAt,
+    },
+    twitter: {
       title: blog.title,
       description: blog.metaDesc || blog.description,
       images: blog.thumbnail ? [blog.thumbnail] : [],
@@ -51,6 +64,14 @@ export default async function BlogDetailPage({ params }) {
 
   return (
     <div className='min-h-screen bg-bg-base px-4 py-12 sm:px-6 lg:px-8'>
+      <BlogPostingJsonLd blog={blog} url={`/blogs/${slug}`} />
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", url: "/" },
+          { name: "Blog", url: "/blogs" },
+          { name: blog.title, url: `/blogs/${slug}` },
+        ]}
+      />
       <article className='mx-auto max-w-4xl'>
         <div className='mb-6'>
           <Link

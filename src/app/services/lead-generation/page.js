@@ -14,10 +14,51 @@ import Section9 from "../../../components/lead_sections/section9";
 import DualDirectionCarousel from "../../../components/dualdirectioncarousel/dualdirectioncarousel";
 import Section from "../../../components/ui/Section";
 import React from "react";
+import ServiceJsonLd from "@/components/seo/ServiceJsonLd";
+import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd";
+
+const TITLE = "B2B Lead Generation Services & Agency";
+const DESCRIPTION =
+  "Fill your pipeline with qualified leads — B2B and real estate lead generation, appointment setting, and email/LinkedIn lead generation services.";
+const KEYWORDS = [
+  "b2b lead generation company",
+  "lead generation expert",
+  "lead generation agency",
+  "real estate lead generation",
+  "contractor lead generation",
+  "local business lead generation",
+  "sales lead generation service",
+  "appointment setting service",
+  "email lead generation",
+  "linkedin lead generation",
+  "business leads provider",
+  "qualified business leads",
+  "online lead generation company",
+  "lead generation consultant",
+  "lead generation services usa",
+];
+const PAGE_URL = "/services/lead-generation";
+
+export const metadata = {
+  title: TITLE,
+  description: DESCRIPTION,
+  keywords: KEYWORDS,
+  alternates: { canonical: PAGE_URL },
+  openGraph: { title: TITLE, description: DESCRIPTION, url: PAGE_URL },
+  twitter: { title: TITLE, description: DESCRIPTION },
+};
 
 const LeadGeneration = () => {
   return (
     <div className="bg-bg-base">
+      <ServiceJsonLd name="Lead Generation" description={DESCRIPTION} url={PAGE_URL} />
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", url: "/" },
+          { name: "Services", url: "/#services" },
+          { name: "Lead Generation", url: PAGE_URL },
+        ]}
+      />
       <Hero />
       <Section background="base">
         <Business />

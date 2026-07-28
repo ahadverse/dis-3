@@ -7,9 +7,11 @@ import StaggerGrid, { StaggerItem } from "../../components/motion/StaggerGrid";
 import ContactForm from "../../components/contact/ContactForm";
 
 export const metadata = {
-  title: "Contact Us | DIS Private LTD",
+  title: "Contact Us",
   description:
-    "Get in touch with DIS Private LTD to discuss website design, maintenance, SEO, and digital marketing for your business. Book a free 30-minute consultation today.",
+    "Get in touch with DIS Private Limited to discuss website design, maintenance, SEO, and digital marketing for your business. Book a free 30-minute consultation today.",
+  keywords: ["contact dis private limited", "book a consultation", "get a quote seo web design"],
+  alternates: { canonical: "/contact" },
 };
 
 const Contact = () => {
