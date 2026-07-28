@@ -2,9 +2,10 @@ import React from "react";
 import Container from "../../components/ui/Container";
 
 export const metadata = {
-  title: "Terms & Conditions | DIS Private LTD",
+  title: "Terms & Conditions",
   description:
-    "Read the terms and conditions governing the use of DIS Private LTD's website design, maintenance, SEO, and digital marketing subscription services.",
+    "Read the terms and conditions governing the use of DIS Private Limited's website design, maintenance, SEO, and digital marketing subscription services.",
+  alternates: { canonical: "/terms" },
 };
 
 const Section = ({ title, children }) => (

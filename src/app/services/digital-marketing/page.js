@@ -19,10 +19,51 @@ import Hero from "../../../components/hero/hero_digital";
 import Section from "../../../components/ui/Section";
 
 import React from "react";
+import ServiceJsonLd from "@/components/seo/ServiceJsonLd";
+import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd";
+
+const TITLE = "Facebook & Meta Ads Management Services";
+const DESCRIPTION =
+  "Grow your business with expert Facebook and Instagram ads management, lead generation campaigns, and Meta ads optimization from DIS Private Limited.";
+const KEYWORDS = [
+  "facebook ads management",
+  "facebook ads expert",
+  "facebook marketing agency",
+  "facebook lead generation",
+  "facebook ads consultant",
+  "local business facebook ads",
+  "facebook campaign management",
+  "facebook advertising service",
+  "facebook ads optimization",
+  "meta ads expert",
+  "instagram ads management",
+  "social media advertising",
+  "paid social marketing",
+  "facebook ads audit",
+  "affordable facebook ads",
+];
+const PAGE_URL = "/services/digital-marketing";
+
+export const metadata = {
+  title: TITLE,
+  description: DESCRIPTION,
+  keywords: KEYWORDS,
+  alternates: { canonical: PAGE_URL },
+  openGraph: { title: TITLE, description: DESCRIPTION, url: PAGE_URL },
+  twitter: { title: TITLE, description: DESCRIPTION },
+};
 
 const DigitalMarketing = () => {
   return (
     <div className="bg-bg-base">
+      <ServiceJsonLd name="Digital Marketing" description={DESCRIPTION} url={PAGE_URL} />
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", url: "/" },
+          { name: "Services", url: "/#services" },
+          { name: "Digital Marketing", url: PAGE_URL },
+        ]}
+      />
       <Hero />
       <Section background="base">
         <Business />

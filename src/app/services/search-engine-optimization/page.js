@@ -16,10 +16,56 @@ import Section9 from "../../../components/seo_sections/section9";
 import React from "react";
 import Section11 from "../../../components/seo_sections/section11";
 import Section from "../../../components/ui/Section";
+import ServiceJsonLd from "@/components/seo/ServiceJsonLd";
+import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd";
+
+const TITLE = "Affordable SEO Services for Small Business";
+const DESCRIPTION =
+  "Boost your organic traffic with affordable SEO services — technical SEO audits, local SEO, and white hat strategies from DIS Private Limited's expert consultants.";
+const KEYWORDS = [
+  "affordable seo services for small business",
+  "seo consultant for small business",
+  "monthly seo service packages",
+  "local seo consultant near me",
+  "technical seo audit service",
+  "wordpress seo expert",
+  "ecommerce seo consultant",
+  "seo services for dentists",
+  "seo services for lawyers",
+  "seo services for plumbers",
+  "seo services for roofers",
+  "seo services for electricians",
+  "seo services for restaurants",
+  "seo services for contractors",
+  "startup seo consultant",
+  "seo help for local business",
+  "affordable local seo expert",
+  "white hat seo consultant",
+  "google ranking improvement service",
+  "organic traffic growth service",
+];
+const PAGE_URL = "/services/search-engine-optimization";
+
+export const metadata = {
+  title: TITLE,
+  description: DESCRIPTION,
+  keywords: KEYWORDS,
+  alternates: { canonical: PAGE_URL },
+  openGraph: { title: TITLE, description: DESCRIPTION, url: PAGE_URL },
+  twitter: { title: TITLE, description: DESCRIPTION },
+};
 
 const SEO = () => {
   return (
     <div className="bg-bg-base">
+      <ServiceJsonLd name="Search Engine Optimization" description={DESCRIPTION} url={PAGE_URL} />
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", url: "/" },
+          { name: "Services", url: "/#services" },
+          { name: "Search Engine Optimization", url: PAGE_URL },
+        ]}
+      />
       <Hero />
       <Section background="base">
         <Business />
